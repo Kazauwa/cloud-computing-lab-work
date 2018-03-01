@@ -20,8 +20,8 @@ Session = sessionmaker(bind=engine)
 session = Session()
 
 
-class TodoList(Base):
-    __tablename__ = 'todo_list'
+class ValueList(Base):
+    __tablename__ = 'value_list'
     id = Column(Integer, primary_key=True)
     value = Column(String(255))
 
