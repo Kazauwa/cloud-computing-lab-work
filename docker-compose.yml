@@ -1,0 +1,19 @@
+version: '3'
+services:
+
+  db:
+    image: postgres
+    environment:
+      POSTGRES_PASSWORD: YOUR_PASSWORD_HERE
+      POSTGRES_USER: USERNAME_HERE
+      POSTGRES_DB: DB_NAME_HERE
+    volumes:
+      - /var/lib/postgresql/data:/var/lib/postgresql/data
+
+  cc-bot:
+    build: .
+    command: ./entry_point.sh
+    volumes:
+      - ./:/code
+    depends_on:
+      - db
