@@ -4,9 +4,9 @@ An example telegram bot for running in docker.
 
 ## How to use
 
-This example requires installed *Docker* on target machine. You can always grab the latest version [here](https://get.docker.com/). You would also need *docker-compose*, which can be found [in official docs](https://docs.docker.com/compose/install/).
+This example requires installed **Docker** on target machine. You can always grab the latest version [here](https://get.docker.com/). You would also need **docker-compose**, which can be found [in official docs](https://docs.docker.com/compose/install/).
 
-Next, you need to set up *docker-compose.yml* file. An example configuration:
+Next, you need to set up **docker-compose.yml** file. An example configuration:
 
 ```yml
 version: '3'
@@ -23,7 +23,7 @@ services:
 
   cc-bot:
     build: .
-    command: python bot.py
+    command: ./entry_point.sh
     volumes:
       - ./:/code
     depends_on:
@@ -31,7 +31,7 @@ services:
 
 ```
 
-Do not forget to set up *config.py*! You need to specify database credentials from docker-compose.yml and telegram bot token. This can be done via respective environmental variables or can config.py can be edited directly.
+Do not forget to set up **config.py**! You need to specify database credentials from docker-compose.yml and telegram bot token. This can be done via respective environmental variables or can config.py can be edited directly.
 
 You are all set! Run this command to run your containers:
 ```bash
