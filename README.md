@@ -30,6 +30,7 @@ services:
       - db
 
 ```
+You are free to choose any other database, just be sure to read instructions in official repository.
 
 Do not forget to set up **config.py**! You need to specify telegram bot token and database credentials from docker-compose.yml. This can be done via respective environment variables or config.py can be edited directly.
 
