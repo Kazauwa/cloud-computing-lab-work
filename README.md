@@ -31,14 +31,14 @@ services:
 
 ```
 
-Do not forget to set up **config.py**! You need to specify database credentials from docker-compose.yml and telegram bot token. This can be done via respective environmental variables or can config.py can be edited directly.
+Do not forget to set up **config.py**! You need to specify telegram bot token and database credentials from docker-compose.yml. This can be done via respective environment variables or config.py can be edited directly.
 
-You are all set! Run this command to run your containers:
+You are all set! Run this command to launch your containers:
 ```bash
 $ sudo docker-compose up -d
 ```
 
-During the first launch docker will go through building process, which can take a few minutes.
+During the initial launch docker will go through building process, which can take a few minutes.
 
 ## Project Goals
 
